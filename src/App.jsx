@@ -7,6 +7,13 @@ export function App() {
   const [text, setText] = useState("");
   const [editingTodo, setEditingTodo] = useState();
 
+  function onKeyDownHandler(e) {
+    if (e.keyCode === 13) {
+      handleSubmit();
+      return;
+    }
+  }
+
   function handleSubmit() {
     if (editingTodo) {
       editTask();
@@ -22,6 +29,10 @@ export function App() {
       setEditingTodo(); // editingTodo = undefined
       setText("");
     }
+  }
+
+  function deleteTaskClick(id) {
+    setTodos([...todos.filter((i) => i.id !== id)]);
   }
 
   function addTask() {
@@ -47,6 +58,7 @@ export function App() {
             className="new-item-input"
             placeholder="...new item"
             value={text}
+            onKeyDown={onKeyDownHandler}
             onChange={(e) => setText(e.target.value || "")}
           ></input>
           <button className="add-new-item" onClick={handleSubmit}>
@@ -68,8 +80,10 @@ export function App() {
                         className="edit-task"
                         onClick={() => editTaskClick(item.id)}
                       ></div>
-                      <div className="delete-task"></div>
-                      <div></div>
+                      <div
+                        className="delete-task"
+                        onClick={() => deleteTaskClick(item.id)}
+                      ></div>
                     </div>
                   </div>
                 );
