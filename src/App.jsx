@@ -35,6 +35,10 @@ export function App() {
     setTodos([...todos.filter((i) => i.id !== id)]);
   }
 
+  function deleteAllTasksClick() {
+    setTodos([]);
+  }
+
   function addTask() {
     if (text.trim()) {
       const item = { id: new Date().getTime(), content: text, done: false };
@@ -89,7 +93,9 @@ export function App() {
                 );
               })}
           </div>
-          <button className="clear-all-items">Clear All</button>
+          <button className="clear-all-items" onClick={deleteAllTasksClick}>
+            Clear All
+          </button>
         </div>
       </div>
     </>
