@@ -70,7 +70,7 @@ export function App() {
             onKeyDown={onKeyDownHandler}
             onChange={(e) => setText(e.target.value || "")}
           ></input>
-          <button className="btn-style" onClick={handleSubmit}>
+          <button className="btn-style add-task-btn" onClick={handleSubmit}>
             {editingTodo ? "Update" : "Add Task"}
           </button>
         </div>

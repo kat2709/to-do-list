@@ -52,6 +52,7 @@
 
 .clear-all-items {
   margin-top: 20px;
+  width: 125px;
 }
 
 .btn-style:hover {
@@ -92,6 +93,11 @@
   font-size: 18px;
   text-transform: capitalize;
   padding: 5px;
+}
+
+.task {
+  max-width: 60%;
+  word-break: break-all;
 }
 
 .setting-task {
@@ -146,4 +152,29 @@
 
 .cross-text {
   text-decoration: line-through;
+}
+
+@media (max-width: 580px) {
+  .add-task-btn {
+    font-size: 14px;
+  }
+
+  .list-container {
+    width: 85%;
+  }
+
+  .task {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 395px) {
+  .add-task-btn {
+    font-size: 12px;
+    padding: 4px;
+  }
+
+  .task {
+    font-size: 12px;
+  }
 }
