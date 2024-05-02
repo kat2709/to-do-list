@@ -27301,7 +27301,7 @@ function App() {
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                                 className: "new-item-input",
-                                placeholder: "...new item",
+                                placeholder: "...new task",
                                 value: text,
                                 onKeyDown: onKeyDownHandler,
                                 onChange: (e)=>setText(e.target.value || "")
@@ -27311,9 +27311,9 @@ function App() {
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                className: "btn-style",
+                                className: "btn-style add-task-btn",
                                 onClick: handleSubmit,
-                                children: editingTodo ? "Update" : "Add Item"
+                                children: editingTodo ? "Update" : "Add Task"
                             }, void 0, false, {
                                 fileName: "src/App.jsx",
                                 lineNumber: 73,
