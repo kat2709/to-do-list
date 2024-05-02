@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import { useState } from "react";
 import "./App.css";
 
@@ -26,7 +25,7 @@ export function App() {
     if (text.trim()) {
       const task = todos.find((i) => i.id === editingTodo);
       task.content = text;
-      setEditingTodo(); // editingTodo = undefined
+      setEditingTodo();
       setText("");
     }
   }
@@ -37,6 +36,12 @@ export function App() {
 
   function deleteAllTasksClick() {
     setTodos([]);
+  }
+
+  function doneTaskClick(id) {
+    const todo = todos.find((i) => i.id === id);
+    todo.done = !todo.done;
+    setTodos(todos.slice());
   }
 
   function addTask() {
@@ -50,7 +55,7 @@ export function App() {
   function editTaskClick(id) {
     const task = todos.find((i) => i.id === id);
     setText(task.content);
-    setEditingTodo(id); // editingTodo = 1 (ID)
+    setEditingTodo(id);
   }
 
   return (
@@ -65,7 +70,7 @@ export function App() {
             onKeyDown={onKeyDownHandler}
             onChange={(e) => setText(e.target.value || "")}
           ></input>
-          <button className="add-new-item" onClick={handleSubmit}>
+          <button className="btn-style" onClick={handleSubmit}>
             {editingTodo ? "Update" : "Add Item"}
           </button>
         </div>
@@ -75,11 +80,16 @@ export function App() {
               todos.map((item, idx) => {
                 return (
                   <div key={item.id} className="item-box">
-                    <div className="task">
+                    <div className={`task ${item.done ? "cross-text" : ""}`}>
                       {idx + 1}. {item.content}
                     </div>
                     <div className="setting-task">
-                      <div className="is-done-task"></div>
+                      <div
+                        className={`is-done-task ${
+                          item.done ? "add-tick" : ""
+                        }`}
+                        onClick={() => doneTaskClick(item.id)}
+                      ></div>
                       <div
                         className="edit-task"
                         onClick={() => editTaskClick(item.id)}
@@ -93,7 +103,10 @@ export function App() {
                 );
               })}
           </div>
-          <button className="clear-all-items" onClick={deleteAllTasksClick}>
+          <button
+            className="clear-all-items btn-style"
+            onClick={deleteAllTasksClick}
+          >
             Clear All
           </button>
         </div>
@@ -101,20 +114,3 @@ export function App() {
     </>
   );
 }
-
-// function Button({}) {
-//   return <div key={item.id} className="item-box">
-//   <div className="task">
-//     {idx + 1}. {item.content}
-//   </div>
-//   <div className="setting-task">
-//     <div className="is-done-task"></div>
-//     <div
-//       className="edit-task"
-//       onClick={() => editTaskClick(item.id)}
-//     ></div>
-//     <div className="delete-task"></div>
-//     <div></div>
-//   </div>
-// </div>
-// }

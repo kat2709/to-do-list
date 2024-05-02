@@ -38,8 +38,7 @@
   outline: 2px solid #caecbd;
 }
 
-.add-new-item,
-.clear-all-items {
+.btn-style {
   cursor: pointer;
   width: 25%;
   font-size: 18px;
@@ -51,24 +50,38 @@
   border: 2px solid #ffffff57;
 }
 
-.add-new-item:hover {
+.clear-all-items {
+  margin-top: 20px;
+}
+
+.btn-style:hover {
   background-color: #caecbd;
   transition: 0.7s all linear;
   box-shadow: 0 8px 16px 0 #caecbd, 0 6px 20px 0 #caecbd;
 }
 
-.clear-all-items:hover {
-  background-color: #caecbd;
-  transition: 0.7s all linear;
-  box-shadow: 0 8px 16px 0 #caecbd, 0 6px 20px 0 #caecbd;
+.items-list-box {
+  margin-top: 20px;
 }
 
 .items-list {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  height: 400px;
-  padding: 20px 0;
+  height: 375px;
+  max-height: 375px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  background-color: rgb(134, 134, 134);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #bdecbdb8;
+  border-radius: 9em;
 }
 
 .item-box {
@@ -88,10 +101,11 @@
 }
 
 .is-done-task {
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   border: 2px solid black;
   cursor: pointer;
+  background-color: #ffffff;
 }
 
 .edit-task {
@@ -123,4 +137,13 @@
 .delete-task:hover {
   transition: all 0.5s;
   transform: scale(1.2);
+}
+
+.add-tick {
+  background-image: url(./assets/tick.svg);
+  background-size: contain;
+}
+
+.cross-text {
+  text-decoration: line-through;
 }
