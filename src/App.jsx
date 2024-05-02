@@ -65,13 +65,13 @@ export function App() {
         <div className="new-item-box">
           <input
             className="new-item-input"
-            placeholder="...new item"
+            placeholder="...new task"
             value={text}
             onKeyDown={onKeyDownHandler}
             onChange={(e) => setText(e.target.value || "")}
           ></input>
           <button className="btn-style" onClick={handleSubmit}>
-            {editingTodo ? "Update" : "Add Item"}
+            {editingTodo ? "Update" : "Add Task"}
           </button>
         </div>
         <div className="items-list-box">
