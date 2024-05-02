@@ -1,0 +1,147 @@
+.app_title {
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 30px;
+  font-weight: 400;
+}
+
+.list-container {
+  background-color: #fff9;
+  border-radius: 10px;
+  width: 70%;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 2%;
+  box-shadow: 0 8px 16px #ffffffe6, 0 6px 20px #ffae0030;
+}
+
+.new-item-box {
+  justify-content: space-between;
+  gap: 10px;
+  display: flex;
+}
+
+.new-item-input {
+  border: none;
+  border-radius: 5px;
+  outline: 2px solid #ffffff30;
+  width: 65%;
+  padding: 8px;
+  font-size: 18px;
+  box-shadow: 0 8px 16px #ffffffe6, 0 6px 20px #ffae0030;
+}
+
+.new-item-input:focus {
+  outline: 2px solid #caecbd;
+}
+
+.btn-style {
+  cursor: pointer;
+  background-color: #fff;
+  border: 2px solid #ffffff57;
+  border-radius: 5px;
+  width: 25%;
+  padding: 8px;
+  font-size: 18px;
+  box-shadow: 0 8px 16px #ffffffe6, 0 6px 20px #ffae0030;
+}
+
+.clear-all-items {
+  margin-top: 20px;
+}
+
+.btn-style:hover {
+  background-color: #caecbd;
+  transition: all .7s linear;
+  box-shadow: 0 8px 16px #caecbd, 0 6px 20px #caecbd;
+}
+
+.items-list-box {
+  margin-top: 20px;
+}
+
+.items-list {
+  flex-direction: column;
+  gap: 10px;
+  height: 375px;
+  max-height: 375px;
+  padding-right: 10px;
+  display: flex;
+  overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+  background-color: #868686;
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #bdecbdb8;
+  border-radius: 9em;
+}
+
+.item-box {
+  text-transform: capitalize;
+  background-color: #bdecbdb8;
+  border-radius: 5px;
+  justify-content: space-between;
+  padding: 5px;
+  font-size: 18px;
+  display: flex;
+}
+
+.setting-task {
+  align-items: center;
+  gap: 10px;
+  display: flex;
+}
+
+.is-done-task {
+  cursor: pointer;
+  background-color: #fff;
+  border: 2px solid #000;
+  width: 15px;
+  height: 15px;
+}
+
+.edit-task {
+  cursor: pointer;
+  background-image: url("pencil.13c6fbae.svg");
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+}
+
+.delete-task {
+  cursor: pointer;
+  background-image: url("cross.9c75413d.svg");
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+}
+
+.is-done-task:hover, .edit-task:hover, .delete-task:hover {
+  transition: all .5s;
+  transform: scale(1.2);
+}
+
+.add-tick {
+  background-image: url("tick.4e60c696.svg");
+  background-size: contain;
+}
+
+.cross-text {
+  text-decoration: line-through;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat;
+}
+
+body {
+  background-color: #000;
+}
+/*# sourceMappingURL=index.2212206d.css.map */
