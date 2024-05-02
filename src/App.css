@@ -1,0 +1,126 @@
+.app_title {
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.list-container {
+  margin: 20px auto;
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 70%;
+  max-width: 500px;
+  padding: 2%;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.9),
+    0 6px 20px 0 rgba(255, 174, 0, 0.19);
+}
+
+.new-item-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.new-item-input {
+  font-size: 18px;
+  padding: 8px;
+  width: 65%;
+  border: none;
+  border-radius: 5px;
+  outline: 2px solid rgba(255, 255, 255, 0.19);
+  box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.9),
+    0 6px 20px 0 rgba(255, 174, 0, 0.19);
+}
+
+.new-item-input:focus {
+  outline: 2px solid #caecbd;
+}
+
+.add-new-item,
+.clear-all-items {
+  cursor: pointer;
+  width: 25%;
+  font-size: 18px;
+  padding: 8px;
+  border-radius: 5px;
+  box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.9),
+    0 6px 20px 0 rgba(255, 174, 0, 0.19);
+  background-color: #ffffff;
+  border: 2px solid #ffffff57;
+}
+
+.add-new-item:hover {
+  background-color: #caecbd;
+  transition: 0.7s all linear;
+  box-shadow: 0 8px 16px 0 #caecbd, 0 6px 20px 0 #caecbd;
+}
+
+.clear-all-items:hover {
+  background-color: #caecbd;
+  transition: 0.7s all linear;
+  box-shadow: 0 8px 16px 0 #caecbd, 0 6px 20px 0 #caecbd;
+}
+
+.items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 400px;
+  padding: 20px 0;
+}
+
+.item-box {
+  display: flex;
+  justify-content: space-between;
+  background-color: #caecbd45;
+  border-radius: 5px;
+  font-size: 18px;
+  text-transform: capitalize;
+  padding: 5px;
+}
+
+.setting-task {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.is-done-task {
+  width: 10px;
+  height: 10px;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.edit-task {
+  width: 20px;
+  height: 20px;
+  background-image: url(./assets/pencil.svg);
+  background-size: cover;
+  cursor: pointer;
+}
+
+.delete-task {
+  width: 20px;
+  height: 20px;
+  background-image: url(./assets/cross.svg);
+  background-size: contain;
+  cursor: pointer;
+}
+
+.is-done-task:hover {
+  transition: all 0.5s;
+  transform: scale(1.2);
+}
+
+.edit-task:hover {
+  transition: all 0.5s;
+  transform: scale(1.2);
+}
+
+.delete-task:hover {
+  transition: all 0.5s;
+  transform: scale(1.2);
+}
